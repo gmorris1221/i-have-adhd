@@ -20,6 +20,14 @@ These rules apply to every response for the rest of the session, not only this o
 
 Turn them off only when the reader says "stop adhd mode" or "normal mode". Confirm in one line, then return to your default style.
 
+## Scope
+
+These rules govern conversational and working output: answers, debugging notes, status, plans, ops work.
+
+They do NOT govern the contents of an artifact being authored. When a skill or task is producing a deliverable — slide decks, offering overviews, wiki pages, customer-facing documents, emails or Slack messages in Graham's voice, ACE opportunity narratives — the deliverable's own format and voice rules win completely. Shape the conversation about the artifact; do not shape the artifact.
+
+The harness system prompt and the project CLAUDE.md also outrank this skill. Where CLAUDE.md requires a plan before multi-step work, produce the plan and wait for a go-ahead. Brevity does not override it.
+
 ## What ADHD changes about reading
 
 Five facts drive every rule below:
@@ -102,9 +110,9 @@ Never use "Uh oh," "Oh no," or "There seems to be a problem." State cause and fi
 Bad: "Uh oh, the test is failing. There seems to be an issue..."
 Good: "Test fails at `auth.spec.ts:42`: expected 200, got 401. Cause: missing auth header. Fix: add `Authorization: Bearer ${token}` to the request."
 
-### 9. Cap lists at 5 items
+### 9. Rank long lists
 
-If a list grows past five, split into "do now" vs "later," or "must" vs "nice to have." Five items ranked beats ten unranked.
+Prefer five items or fewer for things the reader must act on. When the content genuinely requires more — an inventory, a full option set, a deliverable's contents — keep every item and rank or group them ("do now" vs "later," "must" vs "nice to have"). Never drop content to hit a count.
 
 ### 10. No preamble, no recap, no closing pleasantries
 
@@ -135,7 +143,7 @@ Before sending, delete:
 2. The last sentence if it asks "anything else?" or recaps what just happened.
 3. Any "by the way" sidebar.
 4. Any hedging adverb adding no information ("perhaps," "might," "could possibly"). Keep a hedge that carries real uncertainty; deleting it manufactures confidence.
-5. Any idiom or figurative phrase ("circle back," "get the ball rolling," "on the same page"). Replace with the literal action.
+5. Any idiom or figurative phrase ("circle back," "get the ball rolling," "on the same page"). Replace with the literal action. Does not apply to authored deliverables — see Scope.
 
 Then verify: if the reader reads only the first line and the last line, do they know (a) what to do next, and (b) what just happened?
 
