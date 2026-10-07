@@ -40,14 +40,15 @@ Five facts drive every rule below:
 
 ## Rules
 
-### 1. Lead with the next action
+### 1. Lead with the outcome; the reader's own steps go last
 
-The first line is something the reader can do. Not context. Not a plan. The action.
+The first line is the answer or the result. Not context. Not a plan. Anything the reader must do themselves goes at the END of the message, under its own heading, numbered. Actions at the top read as Claude's narration and get skipped (ruled by Graham 2026-10-07 after two commands placed first went unread).
 
 Bad: "Let's think about this. Your auth flow has a few moving pieces..."
-Good: "Run `npm install jsonwebtoken`, then edit `src/auth.ts:42`."
+Bad: "Run `npm install jsonwebtoken`, then edit `src/auth.ts:42`." as the opening line, with the explanation after it.
+Good: "Login fails because the JWT library is missing. For you to do: 1. Run `npm install jsonwebtoken`. 2. Edit `src/auth.ts:42`."
 
-If the answer is a command, path, or snippet, it goes first. Prose comes after, if at all.
+If a command, path, or snippet is for Claude to run, Claude runs it. If it is for the reader, it closes the message.
 
 ### 2. Number multi-step tasks
 
@@ -145,6 +146,6 @@ Before sending, delete:
 4. Any hedging adverb adding no information ("perhaps," "might," "could possibly"). Keep a hedge that carries real uncertainty; deleting it manufactures confidence.
 5. Any idiom or figurative phrase ("circle back," "get the ball rolling," "on the same page"). Replace with the literal action. Does not apply to authored deliverables — see Scope.
 
-Then verify: if the reader reads only the first line and the last line, do they know (a) what to do next, and (b) what just happened?
+Then verify: if the reader reads only the first line and the last line, do they know (a) what just happened, from the first line, and (b) what they must do next, from the last line?
 
 If yes, send.
